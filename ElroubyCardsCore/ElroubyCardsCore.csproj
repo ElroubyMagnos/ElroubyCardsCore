@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55043EF4-4883-4863-AFFD-86BF324DBC78}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ElroubyCardsCore</RootNamespace>
+    <AssemblyName>ElroubyCardsCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScoreWindow.designer.cs">
+      <DependentUpon>ScoreWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardItems\Card.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CardItems\Card.designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardItems\Deck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CardItems\Deck.designer.cs">
+      <DependentUpon>Deck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardItems\Field.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CardItems\Field.designer.cs">
+      <DependentUpon>Field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandFields.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HandFields.designer.cs">
+      <DependentUpon>HandFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Owner.cs" />
+    <Compile Include="Tools\Score.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Score.designer.cs">
+      <DependentUpon>Score.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScoreWindow.resx">
+      <DependentUpon>ScoreWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardItems\Card.resx">
+      <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardItems\Deck.resx">
+      <DependentUpon>Deck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardItems\Field.resx">
+      <DependentUpon>Field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandFields.resx">
+      <DependentUpon>HandFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Score.resx">
+      <DependentUpon>Score.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddScore.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreTV.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
